@@ -1,0 +1,42 @@
+@(MyTvmovie: List[tvmovie])
+<div>
+    <div class="alert alert-secondary">
+        <center><h1 class="text-dark"><strong>List Page</strong></h1>
+    <table class="table table-striped" width="50%" border="1" align="center">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Product Name</th>
+            <th>Number of Products</th>
+            <th>Screen</th>
+            <th>Selected Site</th>
+            <th>TV Installation</th>
+            <th>Transport Service</th>
+            <th>Accessories</th>
+            <th>Deposit</th>
+            <th>Discount</th>
+        </tr>
+        @for(tvmovie <-MyTvmovie){
+        <tr>
+            <td>@tvmovie.getName()</td>
+            <td>@tvmovie.getAdd()</td>
+            <td>@tvmovie.getNumber()</td>
+            <td>@tvmovie.getProduct()</td>
+            <td>@tvmovie.getNum()</td>
+            <td>@tvmovie.getHd()</td>
+            <td>@tvmovie.getSize()</td>
+            <td>@tvmovie.getInstall()</td>
+            <td>@tvmovie.getTarn()</td>
+            <td>@tvmovie.getAss()</td>
+            <td>@tvmovie.getPrice()</td>
+            <td>@tvmovie.getDiscount() %</td>
+        </tr>
+        }
+    </table>
+
+    <a class="btn btn-dark" href="/lab9" role="button">Add</a>
+        </center>
+    </div>
+
+</div>

@@ -1,0 +1,39 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.start()
+GET     /test                       controllers.Application.test()
+GET     /meme                       controllers.Application.meme()
+GET     /product                    controllers.Application.product()
+GET     /lab7                       controllers.Application.lab7()
+GET     /lab8                       controllers.Application.lab8()
+GET     /lab9                       controllers.Application.lab9()
+GET     /lab9show                   controllers.Application.lab9show()
+GET     /lab10show                  controllers.Application.lab10show()
+
+POST    /getLab7                    controllers.Application.getLab7()
+POST    /getLab8                    controllers.Application.getLab8()
+POST    /getLab9                    controllers.Application.getLab9()
+GET     /lab11                      controllers.Application.lab11()
+POST    /getLab11                   controllers.Application.getLab11()
+GET     /lab11show                  controllers.Application.lab11show()
+GET     /edit/:id                   controllers.Application.lab11update(id:String)
+POST    /getLab11update             controllers.Application.getLab11update()
+GET     /Delete/:id                 controllers.Application.lab11delete(id:String)
+
+GET     /inputLab12                 controllers.Application.inputLab12()
+POST    /getInputlab12              controllers.Application.getInputLab12()
+#GET    /lab12show                  controllers.Application.lab12show()
+GET     /editLab12/:id_sale         controllers.Application.lab12update(id_sale:String)
+POST    /getLab12_update             controllers.Application.getLab12update()
+GET     /DeleteLab12/:id_sale       controllers.Application.DeleteLab12(id_sale :String)
+GET     /showPageLab12/:n           controllers.Application.showPageLab12(n :Integer)
+
+
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

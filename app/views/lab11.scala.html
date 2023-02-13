@@ -1,0 +1,47 @@
+@(newForm:Form[Movies])
+@import helper._
+<br>
+<div class="alert alert-secondary">
+    <center><h1 class="text-dark"><strong>LAB 11 FORM ADD</strong></h1>
+        <h5>Please fill out the form</h5></center>
+</div>
+    <div class="col-sm9">
+        <div class="col-sm-45">
+            <div class="container-fluid">
+                <div>
+                            @helper.form(action=routes.Application.getLab11()){
+                            @inputText(newForm("id"), '_label -> "รหัสการสั่งซื้อ", 'required->"required",'placeholder -> "รหัส")
+                            @if(flash.containsKey("msgError")){
+                                @flash.get("msgError")
+                            </div>
+                            }
+                            @inputText(newForm("name"), '_label -> "ชื่อ - สกุล" , 'required->"required",'placeholder -> "ชื่อ - สกุล")
+                            @inputText(newForm("address"), '_label -> "ที่อยู่", 'required->"required",'placeholder -> "ที่อยู่")
+                            @inputText(newForm("number"), '_label -> "เบอร์โทรศัพท์", 'required->"required",'placeholder -> "เบอร์โทรศัพท์")
+                            @inputText(newForm("pduct"), '_label -> "ชื่อสินค้า", 'required->"required",'placeholder -> "ชื่อสินค้า")
+                            @inputText(newForm("fin"), '_label -> "จำนวน", 'required->"required",'placeholder -> "จำนวนสินค้า")
+                            @inputRadioGroup(newForm("screen"), options=Seq("65"->"1 : 65 นิ้ว", "55"->"2 : 55 นิ้ว", "50"->"3 : 50 นิ้ว", "49"->"4 : 49 นิ้ว", "42"->"5 : 42 นิ้ว"), '_label -> "Screen")
+                            @inputRadioGroup(newForm("hds"), options=Seq("Black"->"1 : Black", "Grey"->"2 : Grey"), '_label -> "สี")
+                            @inputRadioGroup(newForm("party"), options=Seq("Intall"->"1 : Intall", "No"->"2 : No"), '_label -> "การติดตั้ง")
+                            @inputRadioGroup(newForm("land"), options=Seq("Shipped"->"1 : Shipped","No sent"->"2 : No sent"), '_label -> "สถานะ")
+                            @inputText(newForm("scale"), '_label -> "รุ่น" , 'required->"required",'placeholder -> "รุ่น")
+                            @inputText(newForm("pmoney"), '_label -> "ราคาสินค้า", 'required->"required",'placeholder -> "ราคาสินค้า")
+                            @select(newForm("discount"), options=Seq("0"->"0%", "10"->"10%", "15"->"15%", "20"->"20%", "30"->"30%"), '_label -> "Discount")
+
+                            <input type="submit" value="save" class="btn btn-dark">
+                            <input type="reset" value="reset" class="btn btn-dark">
+                            <a href="/lab11show"  class="btn btn-dark" >Back</a>
+<br>
+                <br>
+                <br>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>

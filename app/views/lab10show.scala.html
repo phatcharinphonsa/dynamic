@@ -1,0 +1,199 @@
+@(movie1:List[movie],movie2:List[movie],movie3:List[movie],movie4:List[movie])
+<br>
+<div class="alert alert-secondary">
+  <center><h1 class="text-dark"><strong>Show Database</strong></h1></center>
+</div>
+<br>
+<br>
+<div>
+  <div align="center">
+    <div class="container">
+      <center><h4 class="text-dark"><strong>ที่อยู่ Khonkaen</strong></h4>
+        <table class="table table-striped">
+          <head>
+            <th>รหัสสินค้า</th>
+            <th>ชื่อสินค้า</th>
+            <th>รุ่น</th>
+            <th>จำนวน</th>
+            <th>ชื่อ</th>
+            <th>เบอร์โทร</th>
+            <th>ที่อยู่</th>
+            <th>ขนาด</th>
+            <th>สี</th>
+            <th>ติดตั้ง</th>
+            <th>การจัดส่ง</th>
+            <th>ราคา</th>
+            <th>ส่วนลด</th>
+          </head>
+
+          @for(movie<-movie1){
+          <tr>
+            <td> @movie.getId() </td>
+            <td> @movie.getPduct() </td>
+            <td> @movie.getScale() </td>
+            <td> @movie.getFin() </td>
+            <td> @movie.getName() </td>
+            <td> @movie.getNumber() </td>
+            <td> @movie.getAddress() </td>
+            <td> @movie.getScreen() </td>
+            <td> @movie.getHds() </td>
+            <td> @movie.getParty() </td>
+            <td> @movie.getLand() </td>
+            <td> @movie.getPmoney() </td>
+            <td> @movie.getDiscount() </td>
+          </tr>
+
+
+        }
+        </table>
+
+      </center>
+      </center>
+</div>
+</div>
+</div>
+<br>
+<br>
+<div>
+  <div align="center">
+    <div class="container">
+      <center><h4 class="text-dark"><strong>รหัสสินค้า VP001</strong></h4>
+        <table class="table table-striped">
+          <head>
+            <th>รหัสสินค้า</th>
+            <th>ชื่อสินค้า</th>
+            <th>รุ่น</th>
+            <th>จำนวน</th>
+            <th>ชื่อ</th>
+            <th>เบอร์โทร</th>
+            <th>ที่อยู่</th>
+            <th>ขนาด</th>
+            <th>สี</th>
+            <th>ติดตั้ง</th>
+            <th>การจัดส่ง</th>
+            <th>ราคา</th>
+            <th>ส่วนลด</th>
+          </head>
+
+          @for(movie<-movie2){
+          <tr>
+            <td> @movie.getId() </td>
+            <td> @movie.getPduct() </td>
+            <td> @movie.getScale() </td>
+            <td> @movie.getFin() </td>
+            <td> @movie.getName() </td>
+            <td> @movie.getNumber() </td>
+            <td> @movie.getAddress() </td>
+            <td> @movie.getScreen() </td>
+            <td> @movie.getHds() </td>
+            <td> @movie.getParty() </td>
+            <td> @movie.getLand() </td>
+            <td> @movie.getPmoney() </td>
+            <td> @movie.getDiscount() </td>
+          </tr>
+
+        }
+        </table>
+      </center>
+</div>
+</div>
+</div>
+<br>
+<br>
+<div>
+      <div align="center">
+        <div class="container">
+          <center><h4 class="text-dark"><strong>สินค้าที่จัดส่งแล้ว</strong></h4>
+            <table class="table table-striped">
+              <head>
+                <th>รหัสสินค้า</th>
+                <th>ชื่อสินค้า</th>
+                <th>รุ่น</th>
+                <th>จำนวน</th>
+                <th>ชื่อ</th>
+                <th>เบอร์โทร</th>
+                <th>ที่อยู่</th>
+                <th>ขนาด</th>
+                <th>สี</th>
+                <th>ติดตั้ง</th>
+                <th>การจัดส่ง</th>
+                <th>ราคา</th>
+                <th>ส่วนลด</th>
+              </head>
+
+              @for(movie<-movie3){
+              <tr>
+                <td> @movie.getId() </td>
+                <td> @movie.getPduct() </td>
+                <td> @movie.getScale() </td>
+                <td> @movie.getFin() </td>
+                <td> @movie.getName() </td>
+                <td> @movie.getNumber() </td>
+                <td> @movie.getAddress() </td>
+                <td> @movie.getScreen() </td>
+                <td> @movie.getHds() </td>
+                <td> @movie.getParty() </td>
+                <td> @movie.getLand() </td>
+                <td> @movie.getPmoney() </td>
+                <td> @movie.getDiscount() </td>
+              </tr>
+
+            }
+            </table>
+          </center>
+          <br>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+<br>
+<div>
+  <div align="center">
+    <div class="container">
+      <center><h4 class="text-dark"><strong>ตารางสินค้าทั้งหมด</strong></h4>
+        <table class="table table-striped">
+          <head>
+            <th>รหัสสินค้า</th>
+            <th>ชื่อสินค้า</th>
+            <th>รุ่น</th>
+            <th>จำนวน</th>
+            <th>ชื่อ</th>
+            <th>เบอร์โทร</th>
+            <th>ที่อยู่</th>
+            <th>ขนาด</th>
+            <th>สี</th>
+            <th>ติดตั้ง</th>
+            <th>การจัดส่ง</th>
+            <th>ราคา</th>
+            <th>ส่วนลด</th>
+          </head>
+
+          @for(movie<-movie4){
+          <tr>
+            <td> @movie.getId() </td>
+            <td> @movie.getPduct() </td>
+            <td> @movie.getScale() </td>
+            <td> @movie.getFin() </td>
+            <td> @movie.getName() </td>
+            <td> @movie.getNumber() </td>
+            <td> @movie.getAddress() </td>
+            <td> @movie.getScreen() </td>
+            <td> @movie.getHds() </td>
+            <td> @movie.getParty() </td>
+            <td> @movie.getLand() </td>
+            <td> @movie.getPmoney() </td>
+            <td> @movie.getDiscount() </td>
+          </tr>
+
+          }
+        </table>
+      </center>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+</div>
+</div>

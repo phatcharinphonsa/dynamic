@@ -1,0 +1,57 @@
+@(movies1:List[Movies])
+<br>
+<br>
+<div class="alert alert-secondary">
+
+    <center><h1 class="text-dark"><strong>LAB 11 FORM ADD</strong></h1>
+        <h5>Please fill out the form</h5></center>
+</div>
+<div>
+       <table class="table table-striped">
+                    <head>
+                        <th>รหัสการสั่งซื้อ</th>
+                        <th>ชื่อ</th>
+                        <th>เบอร์โทร</th>
+                        <th>ที่อยู่</th>
+                        <th>ชื่อสินค้า</th>
+                        <th>รุ่น</th>
+                        <th>จำนวน</th>
+                        <th>ขนาด</th>
+                        <th>สี</th>
+                        <th>การติดตั้ง</th>
+                        <th>การจัดส่ง</th>
+                        <th>ราคา</th>
+                        <th>ส่วนลด</th>
+                        <th>แก้ไข / ลบ</th>
+                    </head>
+                    @for(movies<-movies1){
+                    <tr>
+                        <td> @movies.getId() </td>
+                        <td> @movies.getName() </td>
+                        <td> @movies.getNumber() </td>
+                        <td> @movies.getAddress() </td>
+                        <td> @movies.getPduct() </td>
+                        <td> @movies.getScale() </td>
+                        <td> @movies.getFin() </td>
+                        <td> @movies.getScreen() </td>
+                        <td> @movies.getHds() </td>
+                        <td> @movies.getParty() </td>
+                        <td> @movies.getLand() </td>
+                        <td> @movies.getPmoney() </td>
+                        <td> @movies.getDiscount() %</td>
+                        <td>
+                            <a href="/edit/@movies.getId()">แก้ไข /</a>
+                            <a href="/Delete/@movies.getId()" onClick="return confirm('ท่านจะลบ: @movies.getId() ต้องการลบหรือไม่')"> ลบ</a>
+                        </td>
+                    </tr>
+                }
+       </table>
+    <div>
+    <Center><a class="btn btn-dark" href="/lab11" role="button" >ADD</a></Center>
+
+
+    </div>
+</div>
+
+
+

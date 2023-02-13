@@ -1,0 +1,21 @@
+2021-10-07 21:24:50,962 - [INFO] - from play in pool-4-thread-8 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2021-10-07 21:25:00,618 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/dynamic64?encoding=utf-8
+
+2021-10-07 21:25:01,160 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2021-10-07 21:35:38,342 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/dynamic64?encoding=utf-8
+
+2021-10-07 21:35:38,406 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2021-10-07 21:36:33,448 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/dynamic64?encoding=utf-8
+
+2021-10-07 21:36:33,525 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+

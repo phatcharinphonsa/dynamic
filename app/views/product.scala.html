@@ -1,0 +1,68 @@
+@(id1:String , proName1:String , proPrice1:Int,  proDetalls1: String, proMotion1 : String , proInsu1 : Int , proStatus1 : String , proTotal1 : Int,
+id2:String , proName2:String , proPrice2:Int,  proDetalls2: String, proMotion2 : String , proInsu2 : Int , proStatus2 : String , proTotal2 : Int
+)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Air</title>
+</head>
+<body>
+<meta charset="UTF-8">
+<main role="main">
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img src="https://backend.central.co.th/media/catalog/product/c/d/cds31077484-2.jpg?impolicy=resize&width=553" alt="CDS83226090" width="350" height="480">
+                        <div class="card-body">
+                            <p class="card-text">
+                            <p>รหัสสินค้า : @id1</p>
+                            <p>ชื่อ : @proName1</p>
+                            <p>ราคา : @proPrice1 บาท</p>
+                            <p>รายละเอียด : @proDetalls1</p>
+                            <p>โปรโมชั่น : @proMotion1</p>
+                            <p>ประกันสินค้า : @proInsu1 ปี</p>
+                            <p> สถานะสินค้า : @proStatus1</p>
+                            <h4>ราคารวมส่วนลด :  ฿@proTotal1.</h4>
+
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a class="btn btn-info" href="/air1" role="button">ดูสินค้า</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img src="https://backend.central.co.th/media/catalog/product/c/d/cds70073577-1.jpg?impolicy=resize&width=553" alt="CDS83226090" width="350" height="480">
+                        <div class="card-body">
+                            <p class="card-text">
+                            <p>รายการ : @id2</p>
+                            <p>ชื่อ : @proName2</p>
+                            <p>ราคา : @proPrice2 บาท</p>
+                            <p>รายละเอียด : @proDetalls2</p>
+                            <p>โปรโมชั่น : @proMotion2</p>
+                            <p>ประกันสินค้า : @proInsu2 ปี</p>
+                            <p>สถานะสินค้า : @proStatus2</p>
+                            <h4>ราคารวมส่วนลด :  ฿@proTotal2.</h4>
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a class="btn btn-info" href="/test" role="button">ดูสินค้า</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+

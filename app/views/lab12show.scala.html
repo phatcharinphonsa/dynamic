@@ -1,0 +1,79 @@
+@(Sale1:com.avaje.ebean.Page[Sale])
+<br>
+<div class="alert alert-secondary">
+  <center><h1 class="text-dark"><strong>LAB 12 FORM</strong></h1>
+    <h5>Please fill out the form</h5></center>
+</div>
+<table class="table table-striped">
+  <head>
+        <th>รหัสการสั่งซื้อ</th>
+        <th>ชื่อ</th>
+        <th>เบอร์โทร</th>
+        <th>ที่อยู่</th>
+        <th>สมาชิก</th>
+        <th>รหัสสินค้า</th>
+        <th>ชื่อสินค้า</th>
+        <th>รุ่น</th>
+        <th>ขนาด</th>
+        <th>ความละเปียด</th>
+        <th>สี</th>
+        <th>การติดตั้ง</th>
+        <th>สถานะ</th>
+        <th>แก้ไข / ลบ</th>
+      </tr>
+      @for(Sale<-Sale1.getList()){
+      <tr>
+        <td> @Sale.getId_sale() </td>
+        <td> @Sale.getName() </td>
+        <td> @Sale.getTele() </td>
+        <td> @Sale.getAddress() </td>
+        <td> @Sale.getDep() </td>
+        <td> @Sale.getMo().getId()</td>
+        <td> @Sale.getMo().getNamepro() </td>
+        <td> @Sale.getMo().getGen() </td>
+        <td> @Sale.getMo().getScale() </td>
+        <td> @Sale.getMo().getNum() </td>
+        <td> @Sale.getMo().getColor() </td>
+        <td> @Sale.getMo().getIntall() </td>
+        <td> @Sale.getMo().getStatus() </td>
+        <td>
+          <a href="/editLab12/@Sale.getId_sale()">แก้ไข / </a>
+          <a href="/DeleteLab12/@Sale.getId_sale()" onClick="return confirm('ต้องการลบรหัสคำสั่งซื้อ : @Sale.getId_sale() หรือไม่')">ลบ</a>
+        </td>
+      </tr>
+  </head>
+      }
+    </table>
+
+<br>
+<br>
+<br>
+<br>
+  <center><a class="btn btn-dark" href="/inputLab12" role="button">Add</a></center>
+  <div style="margin-top: 10%">
+    <p align="center">
+      <i class="text-secondary">@Sale1.getDisplayXtoYofZ(" - "," จากทั้งหมด ") รายการ </i>
+      <br>
+      @if(Sale1.hasPrev){
+      <a href="/showPageLab12/@Sale1.getPageIndex" class="btn bg-secondary">ย้อนกลับ</a>
+      }else{
+      <a class="btn bg-secondary disabled"> ย้อนกลับ </a>
+      }
+      @for(i <- 1 to Sale1.getTotalPageCount){
+      @if(i==Sale1.getPageIndex+1){
+      <a href="/showPageLab12/@i" class="btn bg-secondary disabled"> @i </a>
+      }else{
+      <a href="/showPageLab12/@i" class="btn bg-secondary"> @i </a>
+      }
+      }
+      @if(Sale1.hasNext){
+      <a href="/showPageLab12/@(Sale1.getPageIndex+2)" class="btn bg-secondary">ถัดไป</a>
+      }else{
+      <a  class="btn bg-secondary disabled"> ถัดไป</a>
+      }
+    </p>
+    <br>
+    <br>
+  </div>
+
+</div>

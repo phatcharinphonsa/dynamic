@@ -1,0 +1,71 @@
+@(tv: tvmovie)
+
+<div class="jumbotron text-center">
+  <h1>Payment Receipt</h1>
+  <p>Please check the correctness.</p>
+</div>
+  <div>
+    <div >
+      <p>Order name : @tv.getName </p>
+      <p>Contact number : @tv.getNumber </p>
+      <p>Delivery address : @tv.getAdd</p>
+      <p>Product name : @tv.getProduct</p>
+      <p>Number of Products : @tv.getNum</p>
+    </div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>ลำดับ</th>
+        <th>รายการ</th>
+        <th>ราคา</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>1</td>
+        <td>Screen</td>
+        <td>@tv.getHd</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Selected Site</td>
+        <td>@tv.getSize</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>TV Installation</td>
+        <td>@tv.getInstall</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Transport Service</td>
+        <td>@tv.getTarn</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Accessories</td>
+        <td>@tv.getAss</td>
+      </tr>
+      <tr style="background-color: dark">
+        <td colspan=2">รวม</td>
+        <td style="background-color: light"  >@tv.getTotal </td>
+      </tr>
+      <tr style="background-color: dark">
+        <td colspan="2"> ส่วนลด (@tv.getDiscount%)</td>
+        <td style="background-color: light"  >@tv.getI_discount</td>
+      </tr>
+      <tr style="background-color: dark">
+        <td colspan="2">ภาษี</td>
+        <td style="background-color: light"  >@tv.getTax</td>
+      </tr>
+      <tr style="background-color: dark">
+        <td colspan="2">มัดจำ</td>
+        <td style="background-color: light"  >@tv.getPrice</td>
+      </tr>
+      <tr style="background-color: dark">
+        <td colspan="2">ราคารวมสุทธิ</td>
+        <td style="background-color: dark"  >@tv.getAll</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
